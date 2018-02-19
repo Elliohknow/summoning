@@ -1,0 +1,8 @@
+
+<h2>Available Creatures</h2>
+<mat-list *ngFor="let creature of creatures">
+    <div *ngIf="creature">
+      <creature-detail *ngIf="shouldFilter(creature)" [creature]="creature" [added]="false"></creature-detail>
+    </div>
+</mat-list>
+<!--<creature-detail [creature]="selectedCreature"></creature-detail>-->

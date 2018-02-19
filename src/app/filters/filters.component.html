@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Filters</mat-card-title>
+  </mat-card-header>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="Choose a summoning spell" (change)="spellChanged($event)" [(value)]="selectedSpell">
+            <mat-option>None</mat-option>
+            <mat-option value="conjure_animals">Conjure Animals</mat-option>
+            <mat-option value="conjure_elemental" disabled>Conjure Elemental</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-radio-group class="example-radio-group">
+      <mat-radio-button class="example-radio-button"  [value]="3">
+        3rd Level
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button"  [value]="5">
+        5th Level
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button"  [value]="7">
+        7th Level
+      </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="Min CR" (change)="minCRChanged($event)" >
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let cr of crs" value="cr[0]">{{cr[1]}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="Max CR" (change)="maxCRChanged($event)">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let cr of crs" value="cr[0]">{{cr[1]}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-card>

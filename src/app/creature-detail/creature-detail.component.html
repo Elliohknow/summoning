@@ -1,0 +1,58 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+        {{creature.name}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      CR: {{creature.cr}} {{creature.tags}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="showDetails">
+
+      <mat-grid-list cols="4" rowHeight="3:2">
+        <mat-grid-tile *ngFor="let instance of creature.instances">
+          <mat-card>
+            <mat-card-header color="warn">
+
+              <mat-card-title>{{instance.name}}</mat-card-title>
+
+            </mat-card-header>
+            <mat-card-content>
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                <input matInput
+                  [(ngModel)]="instance.hp"
+                  type="number" name="hp"
+                  placeholder="Remaining HP">
+                </mat-form-field>
+              </form>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="warn"
+                  (click)="instance.hp = instance.hp - 10">
+                  HURT 10</button>
+              <button mat-button
+                  (click)="removeInstance(instance)">
+                REMOVE</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <app-stat-block [creature]=creature></app-stat-block>
+    </div>
+  </mat-card-content>
+
+
+  <mat-card-actions>
+    <button *ngIf="!added" mat-button
+      (click)="addCreature(creature)">
+      ADD</button>
+    <button *ngIf="added" mat-button
+        (click)="remove()">
+        REMOVE</button>
+    <button mat-button
+      (click)="toggleShowDetails()">
+      DETAILS</button>
+  </mat-card-actions>
+</mat-card>

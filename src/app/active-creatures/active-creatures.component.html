@@ -1,0 +1,6 @@
+<h2>Active Creatures</h2>
+<mat-list *ngFor="let creature of creatures">
+  <div *ngIf="creature && creature.active">
+    <creature-detail [creature]="creature" [added]=true></creature-detail>
+  </div>
+</mat-list>
