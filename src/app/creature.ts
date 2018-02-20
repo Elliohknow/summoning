@@ -12,6 +12,6 @@ export class Creature {
   intelligence:number;
   challenge_rating:number;
   special_abilities:any[];
-  actions:any:[];
+  actions:any[];
   instances:any[];
-}
+};
