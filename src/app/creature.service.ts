@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { Creature } from './creature';
-import { CREATURES } from './mock-creatures';
+//import { CREATURES } from './mock-creatures';
+import { CREATURES } from './5e-SRD-Monsters';
 import { MessageService } from './message.service';
 
 @Injectable()
@@ -34,21 +35,25 @@ export class CreatureService {
   }
 
   setMinCR(value): void{
+    console.log("min cr set to ", value);
     this.minCR = value;
   }
   setMaxCR(value): void{
+    console.log("max cr set to ", value);
     this.maxCR = value;
   }
 
   shouldFilter(creature: Creature): boolean {
-    if (this.spell === 'conjure_animals'){
-      if (creature.tags.includes('beast')){
-        return true;
+    var good:boolean = true;
+    if (this.spell === 'conjure_animals' && creature.type !== 'beast'){
+      return false;
+    }
+    if (creature.challenge_rating < this.minCR
+       || creature.challenge_rating > this.maxCR){
+      return false;
+    }
 
-      } else { //not a beast
-        return false;
-      }
-    }    else return true;
+    return good;
   }
 
 

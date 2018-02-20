@@ -1,3 +1,68 @@
+<mat-grid-list cols="4" rowHeight="3:2">
+  <mat-grid-tile *ngFor="let instance of creature.instances">
+    <mat-card>
+      <mat-card-header color="warn">
+
+        <mat-card-title>{{instance.name}}</mat-card-title>
+
+      </mat-card-header>
+
+      <mat-card-content>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+          <input matInput
+            [(ngModel)]="instance.hp"
+            type="number" name="hp"
+            placeholder="Remaining HP">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="warn"
+            (click)="instance.hp = instance.hp - 10">
+            HURT 10</button>
+        <button mat-button
+            (click)="removeInstance(instance)">
+          REMOVE</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<app-stat-block [creature]=creature></app-stat-block>
+
+<h2>Special Abilities</h2>
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel *ngFor="let ability of creature.special_abilities" >
+    <mat-expansion-panel-header>
+      <mat-panel-title >
+        {{ability.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ability.desc.substring(0, 60)}}...
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      {{ability.desc}}
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+
+<h2>Actions</h2>
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel *ngFor="let ability of creature.actions">
+    <mat-expansion-panel-header>
+      <mat-panel-title >
+      {{ability.name}}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{ability.damage_dice}} + {{ability.damage_bonus}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+    {{ability.desc}}
+  </mat-expansion-panel>
+</mat-accordion>
+<!--
 <mat-card>
   <mat-card-header>
     <mat-card-title>
@@ -56,3 +121,4 @@
       DETAILS</button>
   </mat-card-actions>
 </mat-card>
+-->

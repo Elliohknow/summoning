@@ -31,6 +31,7 @@ import { StatBlockComponent } from './stat-block/stat-block.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import {MatSliderModule} from '@angular/material/slider';
     AppRoutingModule,
     MatCardModule, MatIconModule,MatToolbarModule, MatMenuModule, MatTabsModule, MatChipsModule,
     MatButtonModule, MatGridListModule, MatInputModule, MatCheckboxModule, MatDividerModule, MatListModule, ScrollDispatchModule,
-    MatSelectModule, MatRadioModule, MatSliderModule
+    MatSelectModule, MatRadioModule, MatSliderModule, MatExpansionModule
   ],
   providers: [
     CreatureService,

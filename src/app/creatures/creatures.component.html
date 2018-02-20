@@ -1,8 +1,24 @@
 
 <h2>Available Creatures</h2>
-<mat-list *ngFor="let creature of creatures">
-    <div *ngIf="creature">
-      <creature-detail *ngIf="shouldFilter(creature)" [creature]="creature" [added]="false"></creature-detail>
-    </div>
-</mat-list>
+<mat-accordion class="example-headers-align" >
+  <div *ngFor="let creature of creatures">
+  <mat-expansion-panel *ngIf="shouldFilter(creature)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{creature.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        CR {{creature.challenge_rating}} {{creature.type}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <creature-detail
+
+      [creature]="creature"
+      [added]="false"></creature-detail>
+    </ng-template>
+
+  </mat-expansion-panel>
+</div>
+</mat-accordion>
 <!--<creature-detail [creature]="selectedCreature"></creature-detail>-->

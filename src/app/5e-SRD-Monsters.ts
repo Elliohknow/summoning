@@ -1,3 +1,7 @@
+import { Creature } from './creature';
+
+export const CREATURES: Creature[] =
+
 [{
 	"index": 1,
 	"name": "Aboleth",
@@ -16458,4 +16462,4 @@
 		"damage_bonus": 1
 	}],
 	"url": "http://www.dnd5eapi.co/api/monsters/325"
-}]
+}];

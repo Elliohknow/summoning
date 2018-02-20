@@ -1,12 +1,17 @@
 export class Creature {
   id: number;
   name: string;
-  tags: string[];
-  stats:{
-    hp:number;
-    cr: number;
-    str: number;
-    con: number;
-  };
+  type: string;
+  subtype: string;
+  hit_points: number;
+  strength:number;
+  dexterity:number;
+  constitution:number;
+  wisdom:number;
+  charisma:number;
+  intelligence:number;
+  challenge_rating:number;
+  special_abilities:any[];
+  actions:any:[];
   instances:any[];
 }

@@ -15,6 +15,8 @@ export class FiltersComponent implements OnInit {
     [1, "1"],
     [2, "2"]
   ]
+  minCrSelect;
+  maxCrSelect;
   constructor(private creatureService: CreatureService) { }
 
   ngOnInit() {
@@ -28,12 +30,17 @@ export class FiltersComponent implements OnInit {
   spellChanged(event) {
     console.log(event);
     this.creatureService.setSpell(event.value)
+    if(event.value === "conjure_animals"){
+      this.minCrSelect=0.25;
+      this.maxCrSelect=2;
+    }
   }
 
   minCRChanged(event) {
     this.creatureService.setMinCR(event.value);
   }
   maxCRChanged(event) {
+    console.log(event.value);
     this.creatureService.setMaxCR(event.value);
   }
 
