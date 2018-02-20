@@ -35,4 +35,5 @@ export class Creature {
   special_abilities:any[];
   actions:any[];
   instances:any[];
+  active:boolean;
 };

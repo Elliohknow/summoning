@@ -64,7 +64,7 @@ export class CreatureService {
     creature.lastLetter = creature.lastLetter+1
     var instance = {};
     instance['name'] = creature.name + " " + creature.lastLetter;
-    instance['hp']=creature.stats.hp;
+    instance['hp']=creature.hit_points;
     if(!creature.instances) creature.instances=[];
     creature.instances.push(instance);
     creature.active=true;
@@ -81,7 +81,7 @@ export class CreatureService {
   }
 
   rollStat(creature:Creature, stat:string){
-    this.messageService.add("CreatureService: " + creature.name + " rolled " +this.mod(creature.stats[stat]));
+    //this.messageService.add("CreatureService: " + creature.name + " rolled " +this.mod(creature.stats[stat]));
   }
   getActiveCreatures(): Observable<Creature[]>{
     this.messageService.add('CreatureService: fetched active creatures');
