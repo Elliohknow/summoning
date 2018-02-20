@@ -83,10 +83,11 @@ export class CreatureService {
   rollStat(creature:Creature, stat:string){
     //this.messageService.add("CreatureService: " + creature.name + " rolled " +this.mod(creature.stats[stat]));
   }
+  /*
   getActiveCreatures(): Observable<Creature[]>{
     this.messageService.add('CreatureService: fetched active creatures');
     return of(CREATURES.find(creature => {creature.instances !== 'undefined'}));
-  }
+  }*/
 
   getCreatures(): Observable<Creature[]> {
     // Todo: send the message _after_ fetching the heroes
