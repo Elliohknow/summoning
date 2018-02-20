@@ -18,7 +18,7 @@ export class CreatureService {
   getCreature(id: number): Observable<Creature> {
     // Todo: send the message _after_ fetching the hero
     this.messageService.add(`CreatureService: fetched creature id=${id}`);
-    return of(CREATURES.find(creature => creature.id === id));
+    return of(CREATURES.find(creature => creature.index === id));
   }
 
   setCircle(state:boolean){
