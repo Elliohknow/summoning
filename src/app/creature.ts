@@ -1,5 +1,5 @@
 export class Creature {
-  id: number;
+  index: number;
   name: string;
   size: string;
   type: string;
