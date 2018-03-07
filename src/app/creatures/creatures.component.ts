@@ -27,7 +27,7 @@ export class CreaturesComponent implements OnInit {
     return this.creatureService.shouldFilter(creature);
   }
 
-  getCreatures(): void{
+  getCreatures(): void {
     this.creatureService.getCreatures()
       .subscribe(creatures => this.creatures = creatures);
 

@@ -19,12 +19,12 @@ export class DashboardComponent implements OnInit {
     this.getCreatures();
   }
 
-  addCreature(creature:Creature): void{
-    console.log("add creature clicked")
+  addCreature(creature: Creature): void {
+    console.log("add creature clicked");
     this.creatureService.addCreature(creature);
   }
   getCreatures(): void {
-    //TODO change this so that it takes the most recent
+    // TODO change this so that it takes the most recent
     this.creatureService.getCreatures()
       .subscribe(creatures => this.creatures = creatures.slice(1, 5));
   }

@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Creature } from '../creature'
+import { Creature } from '../creature';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { CreatureService }  from '../creature.service';
-import { StatBlockComponent } from '../stat-block/stat-block.component'
+import { CreatureService } from '../creature.service';
+import { StatBlockComponent } from '../stat-block/stat-block.component';
 @Component({
   selector: 'creature-detail',
   templateUrl: './creature-detail.component.html',
@@ -12,35 +12,35 @@ import { StatBlockComponent } from '../stat-block/stat-block.component'
 })
 export class CreatureDetailComponent implements OnInit {
   @Input() creature: Creature;
-  @Input() added:boolean;
-  showDetails:boolean = false;
+  @Input() added: boolean;
+  showDetails: boolean = false;
 
   constructor(
-  private route: ActivatedRoute,
-  private creatureService: CreatureService,
-  private location: Location
-) {}
+    private route: ActivatedRoute,
+    private creatureService: CreatureService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
-    //this.getCreature();
+    // this.getCreature();
   }
 
-  removeInstance(instance):void{
-    console.log(this.creature)
-    var index = this.creature.instances.indexOf(instance);
-    if (index > -1){
+  removeInstance(instance): void {
+    console.log(this.creature);
+    const index = this.creature.instances.indexOf(instance);
+    if (index > -1) {
       this.creature.instances.splice(index, 1);
     }
   }
 
-  remove():void {
+  remove(): void {
     this.creatureService.removeAllInstancesAndDeactivate(this.creature);
   }
 
-  addCreature(creature:Creature):void{
+  addCreature(creature: Creature): void {
     this.creatureService.addCreature(creature);
   }
-  toggleShowDetails(): void{
+  toggleShowDetails(): void {
     this.showDetails = !this.showDetails;
   }
 

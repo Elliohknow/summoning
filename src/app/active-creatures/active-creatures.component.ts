@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CreatureService } from '../creature.service';
-import { Creature } from '../creature'
+import { Creature } from '../creature';
 @Component({
   selector: 'active-creatures',
   templateUrl: './active-creatures.component.html',
@@ -14,7 +14,7 @@ export class ActiveCreaturesComponent implements OnInit {
     this.getCreatures();
   }
 
-  getCreatures(): void{
+  getCreatures(): void {
     this.creatureService.getCreatures()
       .subscribe(creatures => this.creatures = creatures);
 
