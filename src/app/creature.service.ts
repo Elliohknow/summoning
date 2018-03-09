@@ -5,7 +5,6 @@ import { Creature } from './creature';
 // import { CREATURES } from './mock-creatures';
 import { CREATURES } from './5e-SRD-Monsters';
 import { MessageService } from './message.service';
-// import { SPELLS } from './summoning-spells-alt';
 import { Spell } from './spell';
 import { SPELLS } from './5e-SRD-Spells';
 
@@ -61,7 +60,8 @@ export class CreatureService {
       case 'conjure_forest_friends': {
         if (creature.type !== 'beast') {
           return false;
-        } else if (creature.challenge_rating > 0.5) {
+        } else if (creature.challenge_rating > 0.5
+          || creature.challenge_rating < 0.125) {
           return false;
         }
         break;
@@ -146,7 +146,6 @@ export class CreatureService {
     // return good;
     return true;
   }
-
 
   addCreature(creature: Creature): void {
     this.messageService.add('CreatureService: added creature ' + creature.name);

@@ -13454,6 +13454,238 @@ export const SPELLS: Spell[] =
           "url": "http://www.dnd5eapi.co/api/subclasses/2"
         }
       ],
+      "creature_types": [
+        "beast"
+      ],
       "url": ""
-    }
+    },
+    {
+    "index": 307,
+    "name": "Find Familiar",
+    "desc": [
+      "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the Statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.",
+      "Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can\'t attack, but it can take other actions as normal.",
+      "When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.",
+      "While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar\'s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.",
+      "As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.",
+      "You can\'t have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.",
+      "Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll."
+    ],
+    "page": "phb 240",
+    "range": "10 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier.",
+    "ritual": "yes",
+    "duration": "Instantaneous",
+    "concentration": "no",
+    "casting_time": "1 hour",
+    "level": 1,
+    "school": {
+        "url": "http://www.dnd5eapi.co/api/magic-schools/2",
+        "name": "Conjuration"
+    },
+    "classes": [
+      {
+        "url": "http://www.dnd5eapi.co/api/classes/12",
+        "name": "Wizard"
+      }
+    ],
+    "subclasses": [],
+    "creature_types": [
+      "beast"
+    ],
+    "url": ""
+  },
+  {
+    "index": 308,
+    "name": "Find Greater Steed",
+    "desc": [
+      "You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: a griffon, a pegasus, a peryton, a dire wolf, a rhinoceros, or a saber-toothed tiger. The creature has the statistics provided in the Monster Manual for the chosen form, though it is a celestial, a fey, or a fiend (your choice) instead of its normal creature type. Additionally, if it has an Intelligence score of 5 or lower, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak.",
+      "You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any spell you cast that targets only you also target the mount.",
+      "The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this spell again re-summons the bonded mount, with all its hit points restored and any conditions removed.",
+      "You can't have more than one mount bonded by this spell or find steed at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently.",
+      "Whenever the mount disappears, it leaves behind any objects it was wearing or carrying."
+    ],
+    "page": "xge 156",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "ritual": "no",
+    "duration": "Instantaneous",
+    "concentration": "no",
+    "casting_time": "10 minutes",
+    "level": 4,
+    "school": {
+        "url": "http://www.dnd5eapi.co/api/magic-schools/2",
+        "name": "Conjuration"
+    },
+    "classes": [
+      {
+        "url": "http://www.dnd5eapi.co/api/classes/7",
+        "name": "Paladin"
+      }
+    ],
+    "subclasses": [
+      {
+        "name": "Lore",
+        "url": "http://www.dnd5eapi.co/api/subclasses/2"
+      }
+    ],
+    "creature_types": [
+      "monstrosity",
+      "beast"
+    ],
+    "url": ""
+  },
+  {
+    "index": 309,
+    "name": "Infernal Calling",
+    "desc": [
+      "Uttering a dark incantation, you summon a devil from the Nine Hells. You choose the devil\'s type, which must be of challenge rating 6 or lower, such as a barbed devil or a bearded devil. The devil appears in an unoccupied space that you can see within range. The devil disappears when it drops to 0 hit points or when the spell ends.",
+      "The devil is unfriendly toward you and your companions. Roll initiative for the devil, which has its own turns. It is under the Dungeon Master's control and acts according to its nature on each of its turns, which might result in it attacking you if it thinks it can prevail, or trying to tempt you to undertake an evil act in exchange for limited service. The DM has the creature's statistics.",
+      "On each of your turns, you can try to issue a verbal command to the devil (no action required by you). It obeys the command if the likely outcome is in accordance with its desires, especially if the result would draw you toward evil. Otherwise, you must make a Charisma (Deception, Intimidation, or Persuasion) check contested by its Wisdom (Insight) check. You make the check with advantage if you say the devil's true name. If your check fails, the devil becomes immune to your verbal commands for the duration of the spell, though it can still carry out your command if it chooses. If your check succeeds, the devil carries out your command -- such as \"attack my enemies\", \"explore the room ahead\", or \"bear this message to the queen\"-- until it completes the activity, at which point it returns to you to report having done so.",
+      "If your concentration ends before the spell reaches its full duration, the devil doesn\'t disappear if it has become immune to your verbal commands. Instead, it acts in whatever manner it chooses for 3d6 minutes, and then disappears.",
+      "If you possess an individual devil\'s talisman, you can summon that devil if it is of the appropriate challenge rating plus 1, and it obeys all your commands with no Charisma checks required."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
+    ],
+    "page": "xge 158",
+    "range": "90 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "A ruby worth at least 999 gp",
+    "ritual": "no",
+    "duration": "Up to 1 hour",
+    "concentration": "yes",
+    "casting_time": "1 minute",
+    "level": 5,
+    "school": {
+        "url": "http://www.dnd5eapi.co/api/magic-schools/2",
+        "name": "Conjuration"
+    },
+    "classes": [
+      {
+        "name": "Warlock",
+			  "url": "http://www.dnd5eapi.co/api/classes/11"
+      },
+      {
+        "name": "Wizard",
+        "url": "http://www.dnd5eapi.co/api/classes/12"
+      }
+    ],
+    "subclasses": [
+      {
+        "url": "http://www.dnd5eapi.co/api/subclasses/2",
+        "name": "Lore"
+      }
+    ],
+    "creature_types": [
+      "devil"
+    ],
+    "url": ""
+  },
+  {
+    "index": 310,
+    "name": "Summon Lesser Demons",
+    "desc": [
+      "You utter foul words, summoning demons from the chaos of the Abyss. Roll on the following table to determine what appears.",
+      "d6   Demons Summoned",
+      "1-2	Two demons of challenge rating 1 or lower",
+      "3-4	Four demons of challenge rating 1/2 or lower",
+      "5-6	Eight demons of challenge rating 1/4 or lower",
+      "The DM chooses the demons, such as manes or dretches, and you choose the unoccupied spaces you can see within range where they appear. A summoned demons disappears when it drops to 0 hit points or when the spell ends.",
+      "The demons are hostile to all creatures, including you. Roll initiative for the summoned demons as a group, which has its own turns. The demons pursue and attack the nearest non-demons to the best of their ability.",
+      "As part of the casting of the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demons can't cross the circle or harm it, and they can't target anyone within it. Using the material component in this manner consumes it when the spell ends."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."
+    ],
+    "page": "xge 167",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "A vial of blood from a humanoid killed within the past 24 hours.",
+    "ritual": "no",
+    "duration": "Up to 1 hour",
+    "concentration": "yes",
+    "casting_time": "1 action",
+    "level": 3,
+    "school": {
+        "url": "http://dnd5eapi.co/api/magic-schools/2",
+        "name": "Conjuration"
+    },
+    "classes": [
+      {
+        "name": "Warlock",
+        "url": "http://dnd5eapi.co/api/classes/11"
+      },
+      {
+        "name": "Wizard",
+        "url": "http://dnd5eapi.co/api/classes/12"
+      }
+    ],
+    "subclasses": [],
+    "creature_types": [
+      "demon"
+    ],
+    "url": ""
+  },
+  {
+    "index": 311,
+    "name": "Summon Greater Demon",
+    "desc": [
+      "You utter foul words, summoning one demon from the chaos of the Abyss. You choose the demon's type, which must be one of challenge rating 5 or lower, such as a shadow demon or barlgura. The demon appears in an unoccupied space you can see within range, and the demon disappears when it drops to 0 hit points or when the spell ends.",
+      "Roll initiative for the demon, which has its own turns. When you summon it and on each of your turns thereafter, you can issue a verbal command to it (requiring no action on your part), telling it what it must do for its next turn. If you issue no command, it spends its turn attacking any creature within reach that has attacked it.",
+      "At the end of each of the demon's turns, it makes a Charisma saving throw. The demon has disadvantage on this saving throw if you say its true name. On a failed save, the demon continues to obey you. On a successful save, your control of the demon ends for the rest of the duration, and the demon spends its turns pursuing and attacking the nearest non-demons to the best of its ability. If you stop concentrating on the spell before it reaches its full duration, an uncontrolled demon doesn't disappear for 1d6 rounds if it still has hit points.",
+      "As a part of casting the spell, you can form a circle on the ground with the blood used as a material component. The circle is large enough to encompass your space. While the spell lasts, the summoned demon can't cross the circle or harm it, and it can't target anyone within it. Using the material component in this manner consumes it when the spell ends."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 5th level or higher, the challenge rating increases by 1 for each slot level above 4th."
+    ],
+    "page": "xge 166",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "A vial of blood from a humanoid killed within the past 24 hours.",
+    "ritual": "no",
+    "duration": "Up to 1 hour",
+    "concentration": "yes",
+    "casting_time": "1 action",
+    "level": 4,
+    "school": {
+        "url": "http://dnd5eapi.co/api/magic-schools/2",
+        "name": "Conjuration"
+    },
+    "classes": [
+      {
+        "name": "Warlock",
+        "url": "http://dnd5eapi.co/api/classes/11"
+      },
+      {
+        "name": "Wizard",
+        "url": "http://dnd5eapi.co/api/classes/12"
+      }
+    ],
+    "subclasses": [],
+    "creature_types": [
+      "demon"
+    ],
+    "url": ""
+  }
 	];

@@ -32,7 +32,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { SpellService } from './spell.service';
 import { SpellsComponent } from './spells/spells.component';
+
 
 
 @NgModule({
@@ -57,7 +59,8 @@ import { SpellsComponent } from './spells/spells.component';
   ],
   providers: [
     CreatureService,
-    MessageService
+    MessageService,
+    SpellService
   ],
   bootstrap: [AppComponent]
 })
